@@ -12,6 +12,7 @@ import code from "./assets/code.png"
 import consulting from "./assets/consulting.png"
 import web1 from "./assets/web1.png"
 import web2 from "./assets/web2.png"
+import web3 from "./assets/web3.png"
 import { useState } from "react"
 
 export default function Home() {
@@ -66,7 +67,7 @@ export default function Home() {
               Minn Htet Wai
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl ">
-              Developer and designer
+              Developer and aspiring learner
             </h3>
             <p className="text-md py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto dark:text-gray-400">
               Self-taught developer hoping to obtain actual experiences. Join me
@@ -104,7 +105,7 @@ export default function Home() {
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400">
               I can create design and see probablites for websites. In the
               future, I would like to teach some of the stuff I will learn for
-              <span className="text-teal-500"> youtube. </span> 
+              <span className="text-teal-500"> youtube. </span>
             </p>
             <p className="text-md py-2 leading-8 text-gray-800 dark:text-gray-400">
               Near in the future, I will offer from a wide range of services,
@@ -112,7 +113,7 @@ export default function Home() {
             </p>
           </div>
           <div className="lg:flex gap-10">
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white ">
+            <div className="text-center flex flex-col items-center shadow-lg p-10 rounded-xl my-10 dark:bg-white ">
               <div>
                 <img src={design} width={100} height={100} />
               </div>
@@ -124,7 +125,7 @@ export default function Home() {
                 I've seen.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+            <div className="text-center flex flex-col items-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <div>
                 <img src={code} width={100} height={100} />
               </div>
@@ -134,7 +135,7 @@ export default function Home() {
                 website others have missed.
               </p>
             </div>
-            <div className="text-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
+            <div className="text-center flex flex-col items-center shadow-lg p-10 rounded-xl my-10 dark:bg-white">
               <div>
                 <img src={consulting} width={100} height={100} />
               </div>
@@ -161,65 +162,119 @@ export default function Home() {
               on some projects but not amazing ones but low-leveled noob ones.
             </p>
           </div>
-          <div id="project">MY PROJECTS</div>
-          <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap items-center">
-            <div className="basis-1/3 flex-1">
+          <div id="project" className="dark:text-gray-400">MY PROJECTS</div>
+
+          <div class="flex flex-col md:flex-row bg-gray-100 rounded-lg shadow-lg overflow-hidden">
+            <div class="md:w-1/2">
               <img
                 src={web1}
-                className="rounded-lg object-cover w-full h-full"
+                class="w-full h-full object-cover"
+                alt="Project Image"
               />
-              <div>
-                <div className="text-sm mt-1 dark:text-gray-400">
-                  This is the project made by using html and CSS.Moreover, this
-                  is the one that got me into web developer path again
-                </div>
-                <div className="flex gap-4 items-center">
+            </div>
+            <div class="md:w-1/2 px-6 py-8 md:p-10 flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold mb-2 dark:text-gray-900">
+                Youtube Clone Original
+              </h2>
+              <p class="md:text-lg text-md mb-6 dark:text-gray-900">
+                This is the project made by using react and material UI and made
+                me understand API more.
+              </p>
+              <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="md:text-lg text-md mb-4 md:mb-0 dark:text-gray-900">
+                  <span class="mr-2">Source Code:</span>
                   <a
                     href="https://github.com/NuNuu4101/youtube-clone"
                     target="_blank">
-                    <AiFillGithub className="text-2xl dark:text-gray-400" />
-                  </a>
-                  <div className="dark:text-gray-400">source code</div>
-                  <a
-                    href="https://youtube-clone-origin.netlify.app/"
-                    target="_blank">
-                    <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 mt-4">
-                      Live demo
-                    </button>
+                    <AiFillGithub class="text-2xl dark:text-gray-900 hover:text-gray-500 transition-colors duration-300" />
                   </a>
                 </div>
+                <a
+                  href="https://youtube-clone-origin.netlify.app/"
+                  target="_blank">
+                  <button class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md hover:from-cyan-600 hover:to-teal-600 transition-colors duration-300">
+                    Live Demo
+                  </button>
+                </a>
               </div>
             </div>
-            <div className="basis-1/3 flex-1">
+          </div>
+          <div class="flex flex-col my-8 bg-gray-100 rounded-md shadow-lg overflow-hidden md:flex-row">
+            <div class="md:w-1/2">
               <img
                 src={web2}
-                className="rounded-lg object-cover w-full h-full"
+                class="w-full h-full object-cover"
+                alt="Project Image"
               />
-              <div>
-                <div className="text-sm mt-1 dark:text-gray-400">
-                  This is the project made by using react and material UI and
-                  made me understand API more.
-                </div>
-                <div className="flex gap-4 items-center">
+            </div>
+            <div class="md:w-1/2 px-6 py-8 md:p-10 flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold mb-2 dark:text-gray-900">
+                Youtube Clone API
+              </h2>
+              <p class="md:text-lg text-md mb-6 dark:text-gray-900">
+                This is the project made by using react and material UI and made
+                me understand API more.
+              </p>
+              <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="md:text-lg text-md mb-4 md:mb-0 dark:text-gray-900">
+                  <span class="mr-2">Source Code:</span>
                   <a
                     href="https://github.com/NuNuu4101/youtube-clone"
                     target="_blank">
-                    <AiFillGithub className="text-2xl dark:text-gray-400" />
-                  </a>
-                  <div className="dark:text-gray-400">source code</div>
-                  <a
-                    href="https://youtubeclone4101.netlify.app/"
-                    target="_blank">
-                    <button className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md ml-8 mt-4">
-                      Live demo
-                    </button>
+                    <AiFillGithub class="text-2xl dark:text-gray-900 hover:text-gray-500 transition-colors duration-300" />
                   </a>
                 </div>
+                <a href="https://youtubeclone4101.netlify.app/" target="_blank">
+                  <button class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md hover:from-cyan-600 hover:to-teal-600 transition-colors duration-300">
+                    Live Demo
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="flex flex-col my-8 bg-gray-100 rounded-md shadow-lg overflow-hidden md:flex-row">
+            <div class="md:w-1/2">
+              <img
+                src={web3}
+                class="w-full h-full object-cover"
+                alt="Project Image"
+              />
+            </div>
+            <div class="md:w-1/2 px-6 py-8 md:p-10 flex flex-col justify-center">
+              <h2 class="text-2xl font-semibold mb-2 dark:text-gray-900">
+                Shoes Shopping Website
+              </h2>
+              <p class="md:text-lg text-md mb-6 dark:text-gray-900">
+                This is the project made by using react and tailwind css. This
+                is the first project ever to get through blackouts and
+                connection issues and depression. However, it still managed to
+                get through all of that. Its a very amazing website for me.
+              </p>
+              <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="md:text-lg text-md mb-4 md:mb-0 dark:text-gray-900">
+                  <span class="mr-2">Source Code:</span>
+                  <a
+                    href="https://github.com/NuNuu4101/my-first-project"
+                    target="_blank">
+                    <AiFillGithub class="text-2xl dark:text-gray-900 hover:text-gray-500 transition-colors duration-300" />
+                  </a>
+                </div>
+                <a
+                  href="https://my-first-shopping-website.netlify.app/"
+                  target="_blank">
+                  <button class="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded-md hover:from-cyan-600 hover:to-teal-600 transition-colors duration-300">
+                    Live Demo
+                  </button>
+                </a>
               </div>
             </div>
           </div>
         </section>
+        <footer className="dark:bg-gray-900  dark:text-gray-400  border-t text-center">
+        Made with love and care by CallMeFidd.
+      </footer>
       </main>
+     
     </div>
   )
 }
